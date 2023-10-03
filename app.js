@@ -21,7 +21,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
   }
 
   const params = {
-    Bucket: 'uditparekhs3',
+    Bucket: process.env.S3_BUCKET,
     Key: req.file.originalname,
     Body: req.file.buffer,
   };
