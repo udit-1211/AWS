@@ -2,7 +2,7 @@
 const express = require('express');
 const multer = require('multer');
 const s3 = require('./aws-config');
-
+require("dotenv/config");
 const app = express();
 const port = 3000;
 
